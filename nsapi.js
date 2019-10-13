@@ -106,7 +106,7 @@ module.exports = class NSAPI {
 
   async getAllStations () {
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v2/stations',
+      path: '/reisinformatie-api/api/v2/stations',
     });
 
     return data.payload;
@@ -138,7 +138,7 @@ module.exports = class NSAPI {
     }
 
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v2/arrivals',
+      path: '/reisinformatie-api/api/v2/arrivals',
       parameters: arguments[0],
     });
 
@@ -172,7 +172,7 @@ module.exports = class NSAPI {
     }
 
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v2/departures/big',
+      path: '/reisinformatie-api/api/v2/departures/big',
       parameters: arguments[0],
     });
 
@@ -206,7 +206,7 @@ module.exports = class NSAPI {
     }
 
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v2/departures',
+      path: '/reisinformatie-api/api/v2/departures',
       parameters: arguments[0],
     });
 
@@ -227,7 +227,7 @@ module.exports = class NSAPI {
   async getDisruption ({ id } = {}) {
 
     const data = await this._request ({
-      path: `/public-reisinformatie/api/v2/disruptions/${id}`,
+      path: `/reisinformatie-api/api/v2/disruptions/${id}`,
     });
 
     return data.payload;
@@ -255,7 +255,7 @@ module.exports = class NSAPI {
     arguments[0].actual = String (actual);
 
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v2/disruptions',
+      path: '/reisinformatie-api/api/v2/disruptions',
       parameters: arguments[0],
     });
 
@@ -280,7 +280,7 @@ module.exports = class NSAPI {
   } = {}) {
 
     const data = await this._request ({
-      path: `/public-reisinformatie/api/v2/disruptions/station/${station}`,
+      path: `/reisinformatie-api/api/v2/disruptions/station/${station}`,
     });
 
     return data.payload;
@@ -314,7 +314,7 @@ module.exports = class NSAPI {
     }
 
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v3/trips/trip',
+      path: '/reisinformatie-api/api/v3/trips/trip',
       parameters: arguments[0],
     });
 
@@ -342,7 +342,7 @@ module.exports = class NSAPI {
     }
 
     const data = await this._request ({
-      path: '/public-reisinformatie/api/v3/trips',
+      path: '/reisinformatie-api/api/v3/trips',
       parameters: arguments[0],
     });
 
@@ -371,7 +371,7 @@ module.exports = class NSAPI {
     }
 
     const data = await this._request ({
-      path: '/public-prijsinformatie/prices',
+      path: '/prijsinformatie-api/prices',
       parameters: arguments[0],
     });
 
